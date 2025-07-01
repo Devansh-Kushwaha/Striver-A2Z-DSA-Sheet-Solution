@@ -4,9 +4,7 @@ class Solution:
         d=defaultdict(int)
         for i in range(len(nums)):
             if target-nums[i] in d and d[target-nums[i]]!=i:
-                print(nums[i])
                 return [d[target-nums[i]],i]
             d[nums[i]]=i
-            
         return []
         
